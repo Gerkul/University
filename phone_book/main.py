@@ -1,4 +1,4 @@
-from dependencies import *
+from dependencies import print_menu, PhoneBook
 
 def main():
     is_run = True
