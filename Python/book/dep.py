@@ -1,7 +1,7 @@
 def print_menu():
     print("1. Add contact")
     print("2. Delete contact by name")
-    print("3. Viev phone book")
+    print("3. View phone book")
     print("4. Change phone number by name")
     print("5. Exit")
     print()
@@ -96,7 +96,7 @@ class PhoneBook:
         else:
             print("The name '" + name + "' doesn't exist")
 
-    def viev(self):
+    def view(self):
         print("\nViev phone book:")
 
         if len(self.book):

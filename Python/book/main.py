@@ -21,7 +21,7 @@ def main():
         elif act == 2:
             phone_book.delete_contact()
         elif act == 3:
-            phone_book.viev()
+            phone_book.view()
         elif act == 4:
             phone_book.change_phone_number()
         elif act == 5:
