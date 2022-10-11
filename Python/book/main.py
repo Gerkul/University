@@ -1,5 +1,6 @@
 from dep import print_menu, PhoneBook
 
+
 def main():
     is_run = True
 
@@ -29,5 +30,6 @@ def main():
         else:
             print("The menu item didn't recognize. Please enter correct action")
         print("\n")
+
 
 main()
