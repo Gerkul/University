@@ -14,11 +14,13 @@ def normalize_phone_number(number):
 
     if number[:2] == '+7' and len(number) == 12:
         return number
-    if number[0] == '8' and len(number) == 11:
+    elif number[0] == '8' and len(number) == 11:
         number = number.replace('8', '+7', 1)
         return number
-    if number[0] == '9' and len(number) == 10:
+    elif number[0] == '9' and len(number) == 10:
         number = '+7' + number
+        return number
+    elif len(number) == 12 and number[1:].isdigit():
         return number
 
     return '0'
@@ -26,6 +28,7 @@ def normalize_phone_number(number):
 
 def normalize_name(name):
     name.lower()
+    # name_surname = name.title().strip()
     name_surname = name.split(' ')
 
     if len(name_surname) < 2:
