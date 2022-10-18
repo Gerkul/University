@@ -17,6 +17,13 @@ def deg_to_gms(deg, formats='string'):
 
 
 def gms_to_deg(d, m, s):
+    """
+    Returns degree
+    :param d:
+    :param m:
+    :param s:
+    :return: d + m + s
+    """
     m = m / 60
     s = s / 3600
 
@@ -24,11 +31,21 @@ def gms_to_deg(d, m, s):
 
 
 def deg_to_rad(deg):
+    """
+    Returns rad
+    :param deg:
+    :return: rad
+    """
     rad = deg * (3.14 / 180)
     return rad
 
 
 def rad_to_deg(rad):
+    """
+    Returns degrees
+    :param rad:
+    :return: deg
+    """
     deg = rad * (180 / 3.14)
     return deg
 

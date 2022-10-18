@@ -1,3 +1,3 @@
-from function_module import *
+import function_module
 
-print(deg_to_gms())
+print(help(function_module))
