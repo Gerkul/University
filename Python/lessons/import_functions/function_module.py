@@ -49,9 +49,9 @@ def rad_to_deg(rad):
     deg = rad * (180 / 3.14)
     return deg
 
-
-print(deg_to_gms(36.97, 1))
-dms = deg_to_gms(36.97, 1)
-print(gms_to_deg(dms[0], dms[1], dms[2]))
-print(deg_to_rad(10))
-print(rad_to_deg(deg_to_rad(10)))
+if __name__ == "__main__":
+    print(deg_to_gms(36.97, 1))
+    dms = deg_to_gms(36.97, 1)
+    print(gms_to_deg(dms[0], dms[1], dms[2]))
+    print(deg_to_rad(10))
+    print(rad_to_deg(deg_to_rad(10)))
