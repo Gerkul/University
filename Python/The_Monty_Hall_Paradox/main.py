@@ -1,15 +1,15 @@
 from random import randrange
 
 def increase_percents(was, became):
-    return became * 100 / was - 100
+    return round(became * 100 / was - 100, 5)
 
 number_of_doors = 70
-probability_of_winning = 1 / number_of_doors
+probability_of_winning = round(1 / number_of_doors, 5)
 
 available_doors = [i + 1 for i in range(number_of_doors)]
 print(available_doors)
 
-player_number = int(input("Выбирите одну дверь двери из трёх(1, 2 или 3): "))
+player_number = int(input(f"Выбирите одну дверь двери из {number_of_doors}: "))
 
 available_doors.remove(player_number)
 
