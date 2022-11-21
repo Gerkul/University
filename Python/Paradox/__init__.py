@@ -1,2 +1,2 @@
-from Python.Paradox.the_monty_hall_paradox import the_monty_hall_paradox
-from Python.Paradox.birthday_paradox import birthday_paradox
+from .the_monty_hall_paradox import the_monty_hall_paradox
+from .birthday_paradox import birthday_paradox
