@@ -1,15 +1,28 @@
 
 
+running = True
+while running:
+    file_name = input("Введите название файла: ")
 
-file_name = input("Введите название файла: ")
+    try:
+        file = open(file_name, 'r')
+        number_of_numbers = file.readline()[:-1]
+        numbers_list = []
 
-file = open(file_name, 'r')
+        for number in file.readlines():
+            if number.endswith('\n'):
+                numbers_list.append(int(number[:-1]))
+            else:
+                numbers_list.append(int(number))
 
-number_of_numbers = file.read()
-print(number_of_numbers)
+        if len(numbers_list) == number_of_numbers:
+            raise Exception("Не правильное кол-во чисел в файле")
 
-set_of_numbers = set()
+        running = False
 
-for line in file.readlines():
-    set.add(int(line))
-    print(set.pop())
+    except FileNotFoundError:
+        print("Такого файла нет")
+    except ValueError:
+        print("Не все элементы числа")
+    except Exception as exception:
+        print(exception)
