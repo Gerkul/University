@@ -19,10 +19,12 @@ while running:
             raise Exception("Не правильное кол-во чисел в файле")
 
         running = False
+        file.close()
 
     except FileNotFoundError:
         print("Такого файла нет")
     except ValueError:
         print("Не все элементы числа")
     except Exception as exception:
+        file.close()
         print(exception)
