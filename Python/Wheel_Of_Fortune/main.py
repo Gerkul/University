@@ -68,6 +68,8 @@ class Game:
 
             if len(self.words) == 0:
                 self.restart_game("Words is over. You won the party. Wonna play another? (yes/no): ")
+            else:
+                self.set_gaming_word()
 
         else:
             print("You less one 'live'")
@@ -93,6 +95,10 @@ class Game:
     def set_game_data(self):
         self.load_words()
         self.live_points = choice_game_difficulty()
+        self.set_gaming_word()
+
+
+    def set_gaming_word(self):
         print("Guess a new word")
 
         self.gaming_word = self.words.pop(random.randint(0, len(self.words) - 1))
