@@ -1,7 +1,5 @@
-list = [s for s in input().split()]
-list_ans = []
-for i in range(0, len(list) - 1):
-    if int(list[i]) < int(list[i + 1]):
-        list_ans.append(list[i + 1])
+lst = [int(s) for s in input().split()]
 
-print(" ".join(list_ans))
+for i in range(len(lst) - 1):
+    if lst[i + 1] > lst[i]:
+        print(lst[i + 1])

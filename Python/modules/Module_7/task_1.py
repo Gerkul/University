@@ -1,6 +1,7 @@
-word_list = input().split(' ')
-sentence = ''
+words_list = input().split(' ')
 
-for word in word_list:
-    print(sentence.count(word))
-    sentence += word
+word_been = []
+
+for word in words_list:
+    print(word_been.count(word))
+    word_been.append(word)

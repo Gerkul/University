@@ -1,18 +1,20 @@
-list = [s for s in input().split()]
-max_num = -100000
-min_num = 100000
-max_index = 0
+lst = [int(s) for s in input().split()]
+min_num = lst[0]
+max_num = lst[0]
 min_index = 0
+max_index = 0
 
-for i in range(0, len(list)):
-    if int(list[i]) > int(max_num):
-        max_num = list[i]
-        max_index = i
-    if int(list[i]) < int(min_num):
-        min_num = list[i]
+
+for i, n in enumerate(lst):
+    if n < min_num:
+        min_num = n
         min_index = i
 
-list[max_index] = min_num
-list[min_index] = max_num
+    if n > max_num:
+        max_num = n
+        max_index = i
 
-print(" ".join(list))
+lst[min_index] = max_num
+lst[max_index] = min_num
+
+print(lst)

@@ -1,9 +1,7 @@
-word = input()
+string = input()
 
-if len(word) % 2 != 0:
-    left_word = word[:len(word) // 2]
-    right_word = word[len(word) // 2:]
+str1 = string[:int(len(string) / 2 + 1)]
+str2 = string[int(len(string) / 2 + 1):]
 
-    left_word += word[(len(word) - 1) // 2]
+print(str2 + str1)
 
-print(right_word + left_word)

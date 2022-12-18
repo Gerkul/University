@@ -1,10 +1,11 @@
-list_1 = [s for s in input().split()]
-list_2 = [s for s in input().split()]
-list_ans = []
+lst1 = [int(s) for s in input().split()]
+lst2 = [int(s) for s in input().split()]
 
-for i in range(0, len(list_1)):
-    for j in range(0, len(list_2)):
-        if list_1[i] == (list_2[j]):
-            list_ans.append(list_1[i])
+new_lst = []
 
-print(" ".join(list_ans))
+for i in range(len(lst1)):
+    for j in range(len(lst2)):
+        if lst1[i] == (lst2[j]):
+            new_lst.append(lst1[i])
+
+print(sorted(new_lst))

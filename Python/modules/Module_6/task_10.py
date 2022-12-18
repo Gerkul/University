@@ -1,6 +1,6 @@
-word = input()
+string = input()
 
-word_formatted = word[:word.find('h')]
-word_formatted += word[word.rfind('h')+1:]
+str1 = string[:string.find('h')]
+str2 = string[string.rfind('h')+1:]
 
-print(word_formatted)
+print(str1 + str2)

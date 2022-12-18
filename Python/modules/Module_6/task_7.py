@@ -1,10 +1,11 @@
-list = [s for s in input().split()]
-list_gen = []
+lst = [int(s) for s in input().split()]
 
-for i in range(0, len(list)):
-    if list_gen.__contains__(list[i]):
+num_been = []
+
+for n in lst:
+    if n in num_been:
         print("ДА")
     else:
         print("НЕТ")
 
-    list_gen.append(list[i])
+    num_been.append(n)

@@ -1,11 +1,10 @@
-list = [s for s in input().split()]
-list_ans = []
-for i in range(0, len(list) - 1):
-    if not list_ans.__contains__(list[i]) and not list_ans.__contains__(list[i + 1]):
-        list_ans.append(list[i + 1])
-        list_ans.append(list[i])
+lst = [int(s) for s in input().split()]
+new_lst = []
+for i in range(0, len(lst) - 1, 2):
+    new_lst.append(lst[i + 1])
+    new_lst.append(lst[i])
+if len(lst) % 2 != 0:
+    new_lst.append(lst[-1])
 
-if len(list) % 2 != 0:
-    list_ans.append(list[len(list) - 1])
-
-print(" ".join(list_ans))
+for item in new_lst:
+    print(item)

@@ -1,10 +1,11 @@
-list_1 = [s for s in input().split()]
-list_2 = [s for s in input().split()]
+lst1 = [int(s) for s in input().split()]
+lst2 = [int(s) for s in input().split()]
+
 count = 0
 
-for i in range(0, len(list_1)):
-    for j in range(0, len(list_2)):
-        if list_1[i] == (list_2[j]):
+for i in range(len(lst1)):
+    for j in range(len(lst2)):
+        if lst1[i] == (lst2[j]):
             count += 1
 
 print(count)
