@@ -23,7 +23,6 @@ def convert_pdf_to_docx(dir_path):
     pdf_paths = []
     for dir_item in os.listdir(dir_path):
         path = dir_path + '\\' + dir_item
-        print(path)
         if os.path.isfile(path) and path.endswith(".pdf"):
             pdf_paths.append(dir_item)
 
@@ -53,7 +52,6 @@ def convert_docx_to_pdf(dir_path):
     docxs_path = []
     for dir_item in os.listdir(dir_path):
         path = dir_path + '\\' + dir_item
-        print(path)
         if os.path.isfile(path) and path.endswith(".docx"):
             docxs_path.append(dir_item)
 
@@ -82,7 +80,20 @@ def resize_img(img, delta):
     return new_image
 
 
-def convert_resize_img(dir_path, percent):
+def convert_resize_img(dir_path):
+    percent = input("Введите процент сжатия изображения от 1 до 100: ")
+    try:
+        percent = int(percent)
+    except ValueError:
+        percent = -1
+
+    while not (percent > 0 and percent < 101):
+        percent = input("Введите процент сжатия изображения от 1 до 100: ")
+        try:
+            percent = int(percent)
+        except ValueError:
+            percent = -1
+
     imgs_path = []
     for dir_item in os.listdir(dir_path):
         try:
@@ -119,7 +130,6 @@ def delete_files(dir_path):
 
     for dir_item in os.listdir(dir_path):
         path = dir_path + '\\' + dir_item
-        print(path)
         if os.path.isfile(path):
             files_paths.append(dir_item)
 

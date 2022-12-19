@@ -18,8 +18,7 @@ while True:
         convert_docx_to_pdf(current_path)
 
     elif action == "3":
-        percent = input("Введите процент сжатия изображения от 1 до 100: ")
-        convert_resize_img(current_path, percent)
+        convert_resize_img(current_path)
 
     elif action == "4":
         delete_files(current_path)
